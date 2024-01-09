@@ -1,0 +1,24 @@
+LEETCODE Problem :- Single Number
+
+Approaches;-
+1) Using Nested Loop -> Time Complexity = O(n*n)
+2) Using Sorting -> Time Complexity = O(n*log(n))
+3) Using XOR -> Time complexity = O(n)
+
+Code for Optimal Soluton(XOR):-
+
+=====================================CODE STARTS HERE===================================================
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+
+        int ans=0;
+
+        for(int i=0 ; i<nums.size() ; i++)
+        {
+            ans=ans^nums[i];
+        }
+        return ans;
+    }
+};
+=====================================CODE ENDS HERE======================================================
